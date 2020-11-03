@@ -1,21 +1,5 @@
 <template>
   <div class="header-container">
-    <router-link to="./" class="header-icon-link">
-      <img :src="logo" class="header-icon" />
-    </router-link>
-    <div class="spacer"></div>
-    <el-menu
-      :default-active="activeIndex1"
-      class="login-menu"
-      mode="horizontal"
-      @select="handleSelect"
-    >
-      <el-submenu index="2">
-        <template slot="title">Account</template>
-        <el-menu-item v-if="!isLoggedIn" index="1-1">Login</el-menu-item>
-        <el-menu-item v-if="!isLoggedIn" index="1-2">Register</el-menu-item>
-      </el-submenu>
-    </el-menu>
   </div>
 </template>
 
