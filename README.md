@@ -3,8 +3,8 @@
 </p>
 <h1 align="center">ArcExchange</h1>
 <p align="center">
-    <img alt="常规测试" src="https://github.com/AyakaLab/ArcExchange/workflows/Node%20Test/badge.svg" />
-    <img alt="生产环境测试" src="https://github.com/AyakaLab/ArcExchange/workflows/Production%20CI%20Test/badge.svg" />
+    <img alt="常规测试" src="https://github.com/Arcucy/ArcExchange/workflows/Node%20Test/badge.svg" />
+    <img alt="生产环境测试" src="https://github.com/Arcucy/ArcExchange/workflows/Production%20CI%20Test/badge.svg" />
 </p>
 
 ## Project setup
