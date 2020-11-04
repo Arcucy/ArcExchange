@@ -1,66 +1,49 @@
 <template>
   <div class="header-container">
+    <SettingButton :icon="infoIcon" :size="18" class="setting-btn" @click="showInfo = !showInfo" />
+    <SettingButton :icon="settingIcon" class="setting-btn" @click="showSettings = !showSettings" />
+    <SettingButton :icon="earthIcon" :size="24" class="setting-btn" @click="showTranslation = !showTranslation" />
+    <SettingButton :icon="moreIcon" :size="18" style="transform: rotate(90deg)" class="setting-btn" @click="showMore = !showMore" />
   </div>
 </template>
 
 <script>
+import SettingButton from './SettingButton.vue'
 
-import logo from '@/assets/logo.png'
+import infoIcon from '../../assets/info.svg'
+import settingIcon from '../../assets/settings.svg'
+import earthIcon from '../../assets/earth.svg'
+import moreIcon from '../../assets/more.svg'
 
 export default {
-  props: {
-    inProcess: {
-      type: Boolean,
-      default: false
-    }
+  components: {
+    SettingButton
   },
   data () {
     return {
-      activeIndex: '1',
-      logo: logo
+      showInfo: false,
+      showSettings: false,
+      showTranslation: false,
+      showMore: false,
+      infoIcon: infoIcon,
+      settingIcon: settingIcon,
+      earthIcon: earthIcon,
+      moreIcon: moreIcon
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-.header-icon {
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 50px;
-  object-fit: cover;
-  text-align: left;
-}
-.spacer {
-  flex: 1;
-}
-.header-menu {
-  flex: 1;
-}
 .header-container {
-  margin-top: 10px;
+  padding-top: 32px;
   display: flex;
-  align-items: center;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: 30px;
 }
-.text-link {
-  text-decoration: none;
-  color: black;
-}
-/deep/ .el-menu-item {
-  font-size: 16px;
-  font-weight: 700;
-}
-/deep/ .el-submenu__title {
-  font-size: 16px;
-  font-weight: 700;
-}
-</style>
 
-<style lang="less">
-.el-menu--popup-bottom-start {
-  text-align: center;
-}
-.el-menu--popup {
-  min-width: 100px !important;
+.setting-btn {
+  margin-left: 5px;
 }
 </style>
