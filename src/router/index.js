@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Landing from '../views/Landing.vue'
+// import Landing from '../views/Landing.vue'
 import Exchange from '../views/Exchange.vue'
 import Assets from '../views/Assets.vue'
 import Transaction from '../views/Transaction.vue'
@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Landing
+    component: Exchange
   },
   {
     path: '/exchange',
